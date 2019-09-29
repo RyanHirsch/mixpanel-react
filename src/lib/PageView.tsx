@@ -5,7 +5,7 @@ import TrackEvent from "./TrackEvent";
 const PageView: React.FunctionComponent<PageViewProps> = ({
   name,
   props = {}
-}) => {
+}: PageViewProps) => {
   return (
     <TrackEvent
       name="Page View"

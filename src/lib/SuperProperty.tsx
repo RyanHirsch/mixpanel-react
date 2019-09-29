@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import mixpanel from "mixpanel-browser";
 
 const SuperProperty: React.FunctionComponent<SuperPropertyProps> = React.memo(
-  ({ name, value }) => {
+  ({ name, value }: SuperPropertyProps) => {
     useEffect(() => {
       mixpanel.register({ [name]: value });
     }, [name, value]);
@@ -13,5 +13,5 @@ const SuperProperty: React.FunctionComponent<SuperPropertyProps> = React.memo(
 export default SuperProperty;
 export interface SuperPropertyProps {
   name: string;
-  value: string | number | boolean;
+  value: number | boolean | string | Date | any[];
 }

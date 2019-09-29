@@ -1,7 +1,6 @@
 import React from "react";
 
-import PageView from "./lib/PageView";
-import SuperProperty from "./lib/SuperProperty";
+import { PageView, SuperProperty, TrackLink } from "./lib";
 
 import MyExample from "./components/MyExample";
 
@@ -25,6 +24,7 @@ const App: React.FC = () => {
       <SuperProperty name="Example Value" value="From Dev" />
       <PageView name="Home Page" />
       <MyExample />
+      <TrackLink href={"//google.com"}>Google</TrackLink>
     </div>
   );
 };
